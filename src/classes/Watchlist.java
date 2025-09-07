@@ -6,18 +6,15 @@ import java.util.List;
 public class Watchlist {
 	ArrayList<Media> wlist = new ArrayList<Media>();
 
-	public int getID(){
-		int id = wlist.size();
-		return id;
-		
-	}
-
-
 	public void addMedia(Media media){
+		int assignedID = wlist.size();
+		media.setID(assignedID);		
 		wlist.add(media);
 	}
 	
-	public void removeMedia(){
+	public void removeMedia(int index){
+		wlist.remove(index);
+		this.reorganiseID(index);
 		
 	}
 	
@@ -28,7 +25,13 @@ public class Watchlist {
 	}
 	
 
-	
+	public void reorganiseID(int index){
+		for(int i = index; i < wlist.size(); i++) {
+			Media media = wlist.get(i);
+			media.setID(i);
+		}
+	}
+
 	public void sortByID(){
 		
 	}

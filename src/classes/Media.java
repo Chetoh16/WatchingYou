@@ -9,8 +9,7 @@ public class Media {
 	boolean watched;
 	
 	//Constructor
-	public Media(int id, String name, String genre, String desc, double duration, int desire){
-		this.id = id;
+	public Media(String name, String genre, String desc, double duration, int desire){
 		this.name = name;
 		this.genre = genre;
 		this.desc = desc;
@@ -51,7 +50,7 @@ public class Media {
 	
     @Override
     public String toString() {
-        return "#" + id + ", Title=" + name + ", Description=" + desc + ", Genre=" + genre;
+        return "#" + id + ", Title= " + name + ", Description= " + desc + ", Genre=" + genre + ", Duration= " + duration + ", Desire= " + desire;
     }
 	
 	//Setters
