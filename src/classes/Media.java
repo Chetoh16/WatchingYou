@@ -50,7 +50,8 @@ public class Media {
 	
     @Override
     public String toString() {
-        return "#" + id + ", Title= " + name + ", Description= " + desc + ", Genre=" + genre + ", Duration= " + duration + ", Desire= " + desire;
+    	
+        return "#" + id + ", Title= " + name + ", Description= " + desc + ", Genre=" + genre + ", Duration= " + duration + ", Desire= " + desire + ", Watched= " + watched;
     }
 	
 	//Setters
